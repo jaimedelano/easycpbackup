@@ -1,1 +1,1 @@
-Source code of Easy Cp Backup® v4
+Source code of Easy Cp Backup v4
