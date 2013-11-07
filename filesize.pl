@@ -1,16 +1,17 @@
 #!/usr/bin/perl
 
-use strict;
-use warnings;
-use LWP::UserAgent;
+	use strict;
+	use warnings;
+	use LWP::UserAgent;
 
-my $file   = 'http://mirrors.hpcf.upr.edu/ftp/pub/Mirrors/CentOS/6.3/isos/i386/CentOS-6.3-i386-LiveCD.iso';
-my $header = GetFileSize($file);
+	my $file   = 'http://mirrors.hpcf.upr.edu/ftp/pub/Mirrors/CentOS/6.3/isos/i386/CentOS-6.3-i386-LiveCD.iso';
+	my $header = GetFileSize($file);
 
-if ($header) {
-    print "File size: " . $header->content_length . " bytes\n";
-    print "Last moified: " . localtime($header->last_modified) . "\n";
-}
+	if ($header) {
+    	    print "File size: " . $header->content_length . " bytes\n";
+    	    print "Last moified: " . localtime($header->last_modified) . "\n";
+	}
+
 
     sub GetFileSize {
         my $url=shift;
