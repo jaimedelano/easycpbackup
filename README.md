@@ -1,1 +1,1 @@
-Source code of Easy Cp Backup v4
+Código-fonte do Enhanced Backup v4
