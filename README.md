@@ -1,5 +1,3 @@
-Código-fonte do Enhanced Backup v4
-
 Recursos incluídos no aplicativo.   
 
         Verificação de vírus após download
