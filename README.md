@@ -31,15 +31,3 @@ Os módulos possuem recursos adicionais como seguem abaixo:
         Suporte ao Google Drive
 
 Também planejo criar uma linguagem de script para ser usada para customização de qualquer tarefa do aplicativo: muito mais personalizável do que via API
-Exemplo: para se fazer backup e enviar um SMS após a operação ser concluída, bastaria executar ou agendar:
-
-#!/bin/env tupi
-
-# Quantidade de memória e de CPU  que se pode usar
-%max_cpu_usage=30%
-%max_mem_usage=20%
-
-# Faz backup do servidor local e envia para servidor FTP remoto
-$backup = new Backup([proto => 'ftp', storage => 'usuario:s3nh4@dominio.com']);
-$backup->execute('22:30'); # executa às 22h 30min ou $backup->execute(+600), começa em 10 min
-new SMS('+55 14 9924 23**', !$backup->had_success ? "Alguma coisa deu errado:\n" . $backup->report : "Tudo OK!\n");
